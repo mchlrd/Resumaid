@@ -15,10 +15,10 @@ const App = () => {
 
       <Route path = 'app' element = {<Layout />}>
         <Route index element = {<Dashboard />}/>
-        <Route path = 'builder/:resumaid' element = {<ResumeBuilder />}/>
+        <Route path = 'builder/:resumeId' element = {<ResumeBuilder />}/>
       </Route>
 
-      <Route path = 'view/:resumaid' element = {<Preview />}/>
+      <Route path = 'view/:resumeId?' element = {<Preview />}/>
       <Route path = 'login' element = {<Login />}/>
     </Routes>
     </>

@@ -171,7 +171,7 @@ const ResumeBuilder = () => {
                       </button>
                   </div>
               </div>
-
+                      
               <ResumePreview data={resumeData} template = {resumeData.template} accentColor={resumeData.accent_color}/>
           </div>
         </div>
