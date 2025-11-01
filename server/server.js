@@ -14,7 +14,15 @@ const PORT = process.env.PORT || 3000;
 await connectDB();
 
 app.use(express.json());
-app.use(cors());
+const allowedOrigins =[
+    "https://resumaid-orcin.vercel.app",
+    "http://localhost:5173"
+];
+app.use(cors({
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true
+}));
 
 app.get('/', (req, res)=>res.send("Server is live"));
 app.use('/api/users', userRouter)
